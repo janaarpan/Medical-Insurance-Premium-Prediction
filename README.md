@@ -21,6 +21,29 @@ Medical-Insurance-Premium-Prediction/
 ├── requirements.txt
 └── .gitignore
 ```
+## System Architecture
+
+```mermaid
+flowchart TD
+    A["User / Client<br/>Applicant Details (JSON)"]
+    B["FastAPI REST API<br/>POST /predict"]
+    C["Pydantic Input Validation"]
+    D["Feature Engineering<br/>BMI, Age Group,<br/>Lifestyle Risk, City Tier"]
+    E["Pre-trained Scikit-learn Pipeline<br/>model/model.pkl"]
+    F["ColumnTransformer<br/>Numerical Processing<br/>One-Hot Encoding"]
+    G["Random Forest Classifier"]
+    H["Prediction Output<br/>Low / Medium / High"]
+    I["JSON Response<br/>Predicted Category<br/>Maximum Probability<br/>Class Probabilities"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+```
 
 ## 1. Environment setup (Windows PowerShell)
 
