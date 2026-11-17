@@ -1,0 +1,17 @@
+{
+  "model_version": "1.0.0",
+  "estimator": "RandomForestClassifier",
+  "sklearn_version": "1.8.0",
+  "training_rows": 80,
+  "test_rows": 20,
+  "features": [
+    "bmi",
+    "age_group",
+    "lifestyle_risk",
+    "city_tier",
+    "income_lpa",
+    "occupation"
+  ],
+  "target": "insurance_premium_category",
+  "random_state": 42
+}
